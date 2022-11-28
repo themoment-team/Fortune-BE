@@ -7,9 +7,6 @@ on:
 env:
   S3_BUCKET_NAME: fortune-build-s3
 
-permissions:
-  contents: read
-
 jobs:
   build:
 
