@@ -22,12 +22,7 @@ public class CompatibilityService {
         return compatibilityRepository.save(compatibility);
     }
 
-    public Compatibility findInfo(CompatibilityDto compatibility){
-         Compatibility info = compatibilityRepository.findByRandomValue(compatibility.getRandomValue()).orElseThrow(() -> {
-             return new IllegalArgumentException("정보 찾기 실패");
-         });
-        System.out.println(compatibility.getRandomValue());
-
-        return info;
+    public Optional<Compatibility> findInfo(CompatibilityDto compatibility){
+        return compatibilityRepository.findByRandomValue(compatibility.getRandomValue());
     }
 }

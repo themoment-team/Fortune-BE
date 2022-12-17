@@ -27,8 +27,7 @@ public class CompatibilityController {
     }
 
     @PostMapping("/info")
-    public Compatibility memberInfo(@RequestBody CompatibilityDto compatibility){
-        System.out.println(compatibility);
+    public Optional<Compatibility> memberInfo(@RequestBody CompatibilityDto compatibility){
         return compatibilityService.findInfo(compatibility);
     }
 }
