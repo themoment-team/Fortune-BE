@@ -22,8 +22,7 @@ public class FortuneDataService {
         return makeFortuneRepository.save(fortuneData);
     }
 
-    public List<FortuneData> randomFortune(FortuneDataDto reqFortuneData){
-        List<FortuneData> fortuneData = makeFortuneRepository.findAll();
-        return fortuneData;
+    public List<FortuneData> randomFortune(){
+        return makeFortuneRepository.findAll();
     }
 }

@@ -31,8 +31,7 @@ public class FortuneDataController {
     }
 
     @GetMapping("/randomFortune")
-    public List<FortuneData> randomFortune(@RequestBody FortuneDataDto fortuneDataDto){
-        List<FortuneData> fortuneData =fortuneDataService.randomFortune(fortuneDataDto);
-        return fortuneData;
+    public List<FortuneData> randomFortune(){
+        return fortuneDataService.randomFortune();
     }
 }

@@ -19,4 +19,7 @@ public class FortuneDataDto {
                 .fortuneData(this.fortuneData)
                 .build();
     }
+    public FortuneDataDto randomFortune(){
+        return null;
+    }
 }
